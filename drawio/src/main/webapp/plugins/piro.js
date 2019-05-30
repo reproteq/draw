@@ -69,14 +69,15 @@ Draw.loadPlugin(function(ui) {
   mxLog.debug('Start ...  ');
 //// cargar Sidebar libs xml ///////////////////////////////////////////////
 var url1 = 'Lib/baterias.xml';
-mxLog.debug('cargado ' + url1 +' ...  ');
+mxLog.debug('cargado OK ' + url1 +' ...  ');
 var url2 = 'Lib/abanicos.xml';
-mxLog.debug('cargado ' + url2 +' ...  ');
+mxLog.debug('cargado OK ' + url2 +' ...  ');
 var url3 = 'Lib/canones.xml';
+mxLog.debug('cargado OK ' + url3 +' ...  ');
 //var url4 = 'Lib/varios.xml';
 mxUtils.get(url1, function(req){ ui.loadLibrary(new LocalLibrary(this, req.getText(),url1));   });
 mxUtils.get(url2, function(req){ ui.loadLibrary(new LocalLibrary(this, req.getText(),url2));   });
-//mxUtils.get(url3, function(req){ ui.loadLibrary(new LocalLibrary(this, req.getText(),url3));   });
+mxUtils.get(url3, function(req){ ui.loadLibrary(new LocalLibrary(this, req.getText(),url3));   });
 //// fin cargar Sidebar libs xml  ///////////////////////////////////////////
 
 /////variables y arrays /////////////////////////////////////////////////////
@@ -109,7 +110,7 @@ function txtGetPiroEfectos(palabra, callback) {
 
 txtGetPiroEfectos("efectos.txt", function(textFile){
    array_piro_efectos = textFile.slice(1, -1).split(",");
-     mxLog.debug('cargado efectos.txt ...  ');
+     mxLog.debug('cargado Ok efectos.txt ...  ');
   //  alert(array_piro_efectos);
 });
 
